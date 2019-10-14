@@ -31,7 +31,7 @@ public class SkipList {
         Node newNode = new Node();
         newNode.data = value;
         newNode.maxLevel = level;
-        Node update[] = new Node[level];
+        Node[] update = new Node[level];
         for (int i = 0; i < level; ++i) {
             update[i] = head;
         }
@@ -97,7 +97,7 @@ public class SkipList {
 
     public class Node {
         private int data = -1;
-        private Node forwards[] = new Node[MAX_LEVEL];
+        private Node[] forwards = new Node[MAX_LEVEL];
         private int maxLevel = 0;
 
         @Override
